@@ -13,19 +13,18 @@
 
   askQuestion()
 
+  handleAnswer()
+
   toggleTurn()
 
   printScore()
 
   printNewTurn()  
-
-
-
-
-
   
 
 ##Players
 -holds number of lives
+
+-method for decrementing life
 
 ##Questions
