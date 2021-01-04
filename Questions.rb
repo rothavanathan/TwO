@@ -1,23 +1,20 @@
 class Question 
-  def generateNumbers
-    [rand(1..20), rand(1..20)]
+  def initialize
+    @num1 = rand(1..20)
+    @num2 = rand(1..20)
   end
 
-  def generateQuestion(numbersArray)
-    "#{@currentPlayer == "p1" ? "Player 1" : "Player 2"}: What does #{numbersArray[0]} plus #{numbersArray[1]} equal?"
+  def generateQuestion(currentPlayer)
+    "#{currentPlayer}: What does #{@num1} plus #{@num2} equal?"
   end
 
-  def isUserCorrect(userGuess, numbersArray)
-    userGuess.to_i == numbersArray[0] + numbersArray[1]
-  end
-
-  def handleAnswer(userGuess, numbersArray)
-    if isUserCorrect(userGuess, numbersArray)
+  def handleAnswer(userGuess)
+    if userGuess.to_i == @num1 + @num2
       puts "Nice one"
-      return true
+      true
     else
       puts "Yikes. Way off."
-      return false
+      false
     end
   end
 end
