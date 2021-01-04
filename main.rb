@@ -1,5 +1,6 @@
 require "./Game.rb"
 require "./Players.rb"
+require "./Questions.rb"
 
 game = Game.new
 player1 = Player.new()
@@ -29,8 +30,6 @@ while !game.isGameOver
       end
     end
   end
-
-
   #game not over
   puts game.printScore(player1.lives, player2.lives)
   puts game.printNewTurn

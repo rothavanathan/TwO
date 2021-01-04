@@ -5,6 +5,7 @@
   ###state
   isGameOver
   currentPlayer
+  winner
 
   ###methods
   genQuestion()
